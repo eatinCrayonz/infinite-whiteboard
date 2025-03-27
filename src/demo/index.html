@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Whiteboard Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        canvas {
+            display: block;
+            background-color: white;
+        }
+        
+        .toolbar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        
+        button {
+            padding: 8px 12px;
+            margin: 0 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container">
+        <canvas id="whiteboard"></canvas>
+    </div>
+    
+    <div class="toolbar">
+        <button id="pen-tool">Pen</button>
+        <button id="rectangle-tool">Rectangle</button>
+        <button id="text-tool">Text</button>
+        <button id="reset-canvas">Reset</button>
+    </div>
+    
+    <div class="instructions">
+        <p><strong>Instructions:</strong></p>
+        <p>- Alt + Drag to pan the canvas</p>
+        <p>- Use mouse wheel to zoom in/out</p>
+        <p>- Click tool buttons to switch tools</p>
+        <p>- Pen Tool: Click and drag to draw lines</p>
+        <p>- Rectangle Tool: Click and drag to draw rectangles</p>
+        <p>- Text Tool: Click where you want to add text</p>
+        <p>- Reset: Clear canvas and center view</p>
+    </div>
+    
+    <script src="bundle.js"></script>
+</body>
+</html> 
